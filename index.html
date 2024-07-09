@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>API Chooser</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <!-- <style>
+        .favorite {
+            margin-right: 0px;
+          }
+    </style> -->
+    <script defer type="module" src="./src/index.js"></script>
+</head>
+
+<body>
+    <header>
+        <h3>API Chooser</h3>
+    </header>
+
+    <div id="favorites">
+
+    </div>
+
+    <table id="api-table">
+        <thead>
+            <tr>
+                <th align="left">ID</th>
+                <th align="left">Name</th>
+                <th align="left">POST</th>
+                <th align="left">Auth</th>
+                <th align="left">Rating</th>
+                <th align="left">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><a href="https://official-joke-api.appspot.com/random_joke" rel="nofollow" target="_blank">Jokes</a></td>
+                <td>True</td>
+                <td>False</td>
+                <td>7</td>
+                <td>
+                    <button class="favorite">Fave</button><button class="flag">Uh Oh</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="https://http.cat/[status_code]" rel="nofollow" target="_blank">HTTP Cats</a></td>
+                <td>True</td>
+                <td>False</td>
+                <td>8</td>
+                <td>
+                    <button class="favorite">Fave</button><button class="flag">Uh Oh</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <form id="new-api">
+        <h4>Add New API</h4>
+        <label for="new-name">Name: </label>
+        <input type="text" name="name" id="new-name" />
+        <label for="new-link">Link: </label>
+        <input type="text" name="Link" id="new-Link" />
+        <label for="new-image">Image: </label>
+        <input type="text" name="image" id="new-image" />
+        <label for="new-POST">POST: </label>
+        <select id="new-POST" name="new-POST">
+            <option value="true" selected>True</option>
+            <option value="false">False</option>
+        </select>
+        <label for="new-Auth">Auth: </label>
+        <select id="new-Auth" name="new-Auth">
+            <option value="true">True</option>
+            <option value="false" selected>False</option>
+        </select>
+        <label for="new-rating">Rating: </label>
+        <input type="number" name="rating" id="new-rating" />
+        <label for="new-details">Details: </label>
+        <textarea name="new-details" name="new-details" id="new-details"></textarea>
+        <input type="submit" id='submit-button' value="Create" />
+      </form>
+
+</body>
+
+</html>
