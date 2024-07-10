@@ -1,0 +1,125 @@
+{
+  "apis": [
+    {
+      "id": "1",
+      "name": "Jokes API",
+      "post": true,
+      "auth": false,
+      "link": "https://official-joke-api.appspot.com/random_joke",
+      "rating": 7,
+      "details": "Easy to use and post.",
+      "image": "https://media.earlyexperts.net/wp-content/uploads/2018/12/displaying-american-flag.jpg",
+      "favorite": false
+    },
+    {
+      "id": "2",
+      "name": "HTTP Cats",
+      "post": false,
+      "auth": false,
+      "link": "https://http.cat/[status_code]",
+      "rating": 6,
+      "details": "So many cats.",
+      "image": "https://amazinganimalphotos.com/wp-content/uploads/2018/07/ugliest-cats-in-the-world-6.jpg",
+      "favorite": false
+    },
+    {
+      "id": "3",
+      "name": "test",
+      "post": false,
+      "auth": true,
+      "link": "https://vehapi.com/",
+      "rating": 4,
+      "details": "Cool cars.",
+      "image": "https://f7432d8eadcf865aa9d9-9c672a3a4ecaaacdf2fee3b3e6fd2716.ssl.cf3.rackcdn.com/C2299/U7763/IMG_4988-large.jpg",
+      "favorite": false
+    },
+    {
+      "id": "4",
+      "name": "RandomUserApi",
+      "post": true,
+      "auth": false,
+      "link": "https://randomuser.me/api/",
+      "rating": 9,
+      "details": "Create random user data",
+      "image": "https://www.kindpng.com/picc/m/80-800188_random-user-random-icon-png-transparent-png.png",
+      "favorite": false
+    },
+    {
+      "id": "5",
+      "name": "Front end tester",
+      "post": true,
+      "auth": false,
+      "link": "https://reqres.in/",
+      "rating": 7,
+      "details": "Good end to end tester",
+      "image": "https://res.cloudinary.com/postman/image/upload/t_team_logo/v1654707985/team/a7f1ef8f2db07e818f956927ad723d4a32d154da41268883d3229e00c93bb796.jpg",
+      "favorite": false
+    },
+    {
+      "id": "6",
+      "name": "JSON placeholder",
+      "post": true,
+      "auth": false,
+      "link": "https://github.com/typicode/json-server",
+      "rating": 8,
+      "details": "Placeholder for all json files",
+      "image": "https://screenshots.codesandbox.io/1i5z0/47.png",
+      "favorite": false
+    },
+    {
+      "id": "7",
+      "name": "Beecepter",
+      "post": true,
+      "auth": false,
+      "link": "https://beeceptor.com/",
+      "rating": 7,
+      "details": "Another good Mock server to see POST requests in real time.",
+      "image": "https://beeceptor.com/docs/img/page-preview/default-build-with-beeceptor.png",
+      "favorite": false
+    },
+    {
+      "id": "8",
+      "name": "Geonames",
+      "post": false,
+      "auth": false,
+      "link": "https://www.geonames.org/",
+      "rating": 2,
+      "details": "Is outdated and goes to the incorrect page.",
+      "image": "https://poldham.github.io/abs/images/geonames/GeoNames_frontpage.png",
+      "favorite": false
+    },
+    {
+      "id": "9",
+      "name": "Technorati",
+      "post": false,
+      "auth": false,
+      "link": "https://technorati.com/",
+      "rating": 1,
+      "details": "The Technorati API has been discontinued since 2014.",
+      "image": "https://fontmeme.com/images/Technorati-Logo.jpg",
+      "favorite": false
+    },
+    {
+      "id": "10",
+      "name": "Face",
+      "post": false,
+      "auth": false,
+      "link": "https://hilcodigital.com/Face/",
+      "rating": 0,
+      "details": " Acquired by Facebook and subsequently shut down.",
+      "image": "https://hilcoglobal.com/wp-content/uploads/2023/03/Hilco-Digital-Assets.png",
+      "favorite": false
+    },
+    {
+      "id": "11",
+      "name": "HTTP Cats",
+      "post": false,
+      "auth": false,
+      "link": "https://sunrise-sunset.org/",
+      "rating": 2,
+      "details": "The API service has been discontinued and is no longer available.",
+      "image": "https://www.photographytalk.com/images/articles/2017_6/iStock-503791572.jpg",
+      "favorite": false
+    }
+  ]
+}

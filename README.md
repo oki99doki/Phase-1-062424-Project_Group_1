@@ -60,7 +60,7 @@ Phase 1 - Week 3 Group Project - Group 1
 ## Three Stretch Goals
 - [ ] User can search or filter to find the right API for their purposes (‘submit’ eventListener)
 - [ ] Use can click a button to note that the API is no longer usable
-- [ ] Change the color of an API row when the user adds it to their Shortlist
+- [ ] Change the color of an API row when the user clicks a button
 
 ## Kanban Board
 - [ ] https://trello.com/b/BTLR4yl7/phase-i-kanban
