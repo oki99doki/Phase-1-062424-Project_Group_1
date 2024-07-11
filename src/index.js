@@ -1,22 +1,50 @@
 // index.js
 const url = "http://localhost:3000";
 const apiTable = document.getElementById("api-table");
-const form = document.getElementById("new-ramen");
+const form = document.getElementById("new-api");
 const favorites = document.getElementById("favorites");
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
 
+  const newApi = {
+    name: e.target.name.value,
+    link: e.target.Link.value,
+    image: e.target.image.value,
+    post: e.target.Post.value,
+    auth: e.target.Auth.value,
+    rating: parseInt(e.target.rating.value),
+    details: e.target['new-details'].value
+  } 
+  fetch(`${url}/apis`, {
+    method: "POST",
+    headers: {'content-type': 'application/json'},
+    body: JSON.stringify(newApi)
+  })
+  .then(res => {
+    if(res.ok){
+      return res.json()
+    } else {
+      throw "error with POST"
+    }
+  })
+  .then(data => {
+    console.log("API", data)
+  })
+  
+})
 //core: fetch and display apis
 const fetchApis = () => {
   fetch(`${url}/apis`)
-  .then(res => {
-    if (res.ok) {
-      return res.json();
-    } else {
-      console.log(res.status);
-      throw new Error(`HTTP error! status: ${res.status}`);
-    }
-  })
-  .then(apis => {
-    apis.forEach(curApi => {
+    .then(res => {
+      if (res.ok) {
+        return res.json();
+      } else {
+        console.log(res.status);
+        throw new Error(`HTTP error! status: ${res.status}`);
+      }
+    })
+    .then(apis => {
+      apis.forEach(curApi => {
         const tableBody = document.querySelector("#api-table tbody");
         const row = document.createElement("tr");
         const idCell = document.createElement("td");
@@ -28,6 +56,7 @@ const fetchApis = () => {
         const buttonsCell = document.createElement("td");
         const buttonFave = document.createElement("button");
         const buttonFlag = document.createElement("button");
+        const buttonDelete = document.createElement("button"); 
 
         idCell.textContent = curApi.id;
         postCell.textContent = curApi.post;
@@ -41,13 +70,15 @@ const fetchApis = () => {
         buttonFave.textContent = "Fave";
         buttonFlag.className = "flag";
         buttonFlag.textContent = "Uh Oh";
+        buttonDelete.className = "delete"; 
+        buttonDelete.textContent = "Delete"; 
         nameCell.append(nameLink);
-        buttonsCell.append(buttonFave, (" "), buttonFlag);
+        buttonsCell.append(buttonFave, " ", buttonFlag, " ", buttonDelete); 
 
         if (curApi.favorite === true) {
           addToFavorites(curApi);
         }
-        
+
         buttonFave.addEventListener("click", () => {
           addToFavorites(curApi);
         });
@@ -56,15 +87,28 @@ const fetchApis = () => {
           showBroken(e.target);
         });
 
-        row.append(idCell, nameCell, postCell, authCell, ratingCell, buttonsCell);
+        buttonDelete.addEventListener("click", () => {
+          
+          row.remove();
+          
+          fetch(`${url}/apis/${curApi.id}`, {
+            method: "DELETE"
+          })
+            .then(res => {
+              if (!res.ok) {
+                throw new Error('Failed to delete API');
+              }
+            })
+            .catch(error => console.error('Error:', error));
+        });
 
+        row.append(idCell, nameCell, postCell, authCell, ratingCell, buttonsCell);
         tableBody.append(row);
         apiTable.append(tableBody);
-      }
-    )
-      
-    });
-  }
+      });
+    })
+    .catch(error => console.error('Error fetching APIs:', error));
+}
 
 fetchApis();
 
