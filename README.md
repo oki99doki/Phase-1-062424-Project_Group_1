@@ -1,7 +1,6 @@
 # Phase-1-062424-Project_Group_1
 Phase 1 - Week 3 Group Project - Group 1
 
-
 # SE-EAST-Phase-1-062424
 ## Project Requirements
 - [ ] A one sentence description of your app
@@ -23,44 +22,49 @@ Phase 1 - Week 3 Group Project - Group 1
 - [ ] User can see a list of APIs and their associated attributes
 - [ ] User can add a new API to the list with details (‘submit’ eventListener)
 - [ ] User can hover over API name and display an image or details (‘mouseover’ eventListener)
-- [ ] User can select "Shortlist" button to add to their favorites (‘click’ eventListener)
+- [ ] User can select "Fave" button to add to their favorites and remove (‘click’ eventListener)
 
 ## DB.JSON
-- [ ] {
+  {
     "apis": [
       {
         "id": "1",
         "name": "Jokes API",
         "post": true,
+        "auth": false,
         "link": "https://official-joke-api.appspot.com/random_joke",
         "rating": 7,
         "details": "Easy to use and post.",
-        "image": "./assets/joke/funny1.jpg"
+        "image": "https://media.earlyexperts.net/wp-content/uploads/2018/12/displaying-american-flag.jpg",
+        "favorite": false
       },
       {
         "id": "2",
         "name": "HTTP Cats",
         "post": false,
+        "auth": false,
         "link": "https://http.cat/[status_code]",
         "rating": 6,
         "details": "So many cats.",
-        "image": "./assets/cats/100.jpg"
-      }
+        "image": "https://amazinganimalphotos.com/wp-content/uploads/2018/07/ugliest-cats-in-the-world-6.jpg",
+        "favorite": false
+      },
     ]
   }
 
 ## Unique Event Listeners
-- [ ] Submit
-- [ ] Mouseover
-- [ ] Click
+- [ ] Submit (add new api)
+- [ ] Mouseover (display tooltip)
+- [ ] Click (add to favorites, remove from favorites, flag as defunct, delete)
 
 ## Array Iteration
 - [ ] We will be using forEach() to iterate over the APIs and display details for them in our table and hover functionality
 
 ## Three Stretch Goals
-- [ ] User can search or filter to find the right API for their purposes (‘submit’ eventListener)
-- [ ] Use can click a button to note that the API is no longer usable
+- [ ] User can click a button to note that the API is no longer usable
 - [ ] Change the color of an API row when the user clicks a button
+- [ ] Delete an API row when the user clicks a button
+- [ ] User can search or filter to find the right API for their purposes (‘submit’ eventListener)
 
 ## Kanban Board
 - [ ] https://trello.com/b/BTLR4yl7/phase-i-kanban
