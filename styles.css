@@ -102,3 +102,28 @@ input[type="submit"] {
     color: white;
     background-color: #46465C;
   }
+  
+
+
+  #myDiv {
+    font-size: 1rem;
+    border: 1px solid #46465C;
+    background-color: white;
+    padding: 1.0rem;
+    margin: 0.25rem 0;
+    width: 100%;
+  }
+
+  .tooltip {
+    display: none;
+    font-size: 1.5rem;
+    background-color: yellow;
+    color: blue;
+    position: absolute;
+    position: relative;
+    top: 60px; left: 640px;
+    padding: 0.5rem;
+    margin: 0.25rem 0;
+  }
+
+  

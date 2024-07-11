@@ -78,7 +78,20 @@ const fetchApis = () => {
         if (curApi.favorite === true) {
           addToFavorites(curApi);
         }
+        nameCell.addEventListener("mouseover", showTooltip);
+        nameCell.addEventListener("mouseout", hideTooltip);
 
+
+        function showTooltip() {
+          const tooltip = document.querySelector(".tooltip");
+          tooltip.textContent = `Details: ${curApi.details}`;
+          tooltip.style.display = "block";
+          tooltip.style.position = 'absolute'
+        }
+        function hideTooltip() {
+          const tooltip = document.querySelector(".tooltip");
+          tooltip.style.display = "none";
+        }
         buttonFave.addEventListener("click", () => {
           addToFavorites(curApi);
         });
